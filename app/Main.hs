@@ -3,6 +3,7 @@
 module Main (main) where
 
 import GI.Gtk qualified as Gtk
+import GI.Gio qualified as Gio
 import Data.GI.Base (AttrOp ((:=)), new, set, get, on)
 
 main :: IO ()
@@ -20,4 +21,7 @@ main = do
     win `set` [#defaultWidth := 400, #defaultHeight := 300]
     -- OverloadedRecordDot 拡張によるメソッド呼び出し風の記法も使える
     win.present
+
+  -- Start the GTK application main loop
+  _ <- Gio.applicationRun app Nothing
   pure ()
