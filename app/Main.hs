@@ -7,7 +7,7 @@ import Data.GI.Base (AttrOp ((:=)), new, set, get, on)
 
 main :: IO ()
 main = do
-  app <- new Gtk.Application [#applicationId := "application-id"]
+  app <- new Gtk.Application [#applicationId := "dev.haruki7049.stugit"]
   -- `on` によってシグナルが送られたときのコールバックを設定できる
   -- ここでは app に #activate シグナルが送られたとき
   _ <- on app #activate do
