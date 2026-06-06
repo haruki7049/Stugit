@@ -22,6 +22,12 @@ main = do
     -- OverloadedRecordDot 拡張によるメソッド呼び出し風の記法も使える
     win.present
 
+    -- Create a label widget
+    label <- new Gtk.Label [#label := "Hello, Stugit!"]
+
+    -- Set the label as the child of the window
+    win `set` [#child := label]
+
   -- Start the GTK application main loop
   _ <- Gio.applicationRun app Nothing
   pure ()
