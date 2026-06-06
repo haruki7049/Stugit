@@ -12,5 +12,11 @@ pkgs.mkShell {
 
   buildInputs = [
     pkgs.gtk2
+    pkgs.libsysprof-capture
+    pkgs.pcre2
+    pkgs.expat
+    pkgs.libuuid
+    pkgs.libxdmcp
+    pkgs.libselinux
   ];
 }
