@@ -4,7 +4,7 @@ module Main (main) where
 
 import GI.Gtk qualified as Gtk
 import GI.Gio qualified as Gio
-import Data.GI.Base (AttrOp ((:=)), new, set, get, on)
+import Data.GI.Base (AttrOp ((:=)), new, set, on)
 
 main :: IO ()
 main = do
