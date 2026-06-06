@@ -3,7 +3,6 @@
 module Main (main) where
 
 import GI.Gtk qualified as Gtk
-import GI.Gio qualified as Gio
 import Data.GI.Base (AttrOp ((:=)), new, set, get, on)
 
 main :: IO ()
@@ -14,7 +13,7 @@ main = do
   _ <- on app #activate do
     -- callback では ImplicitParams 拡張によってレシーバー `?self` を参照できる
     -- `get` によってプロパティを参照できる
-    putStrLn $ show (?self `get` #applicationId)
+    print =<< ?self `get` #applicationId
     win <- new Gtk.ApplicationWindow [#application := ?self]
     -- `set` によってプロパティを設定できる
     win `set` [#title := "window title"]
