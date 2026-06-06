@@ -1,21 +1,23 @@
-cabal-version:      3.0
-name:               Stugit
-version:            0.1.0.0
-license:            MIT
-license-file:       LICENSE
-author:             haruki7049
-maintainer:         tontonkirikiri@gmail.com
-category:           Control
-build-type:         Simple
-extra-doc-files:    CHANGELOG.md
+cabal-version:   3.0
+name:            Stugit
+version:         0.1.0.0
+license:         MIT
+license-file:    LICENSE
+author:          haruki7049
+maintainer:      tontonkirikiri@gmail.com
+category:        Control
+build-type:      Simple
+extra-doc-files: CHANGELOG.md
 
 common warnings
-    ghc-options: -Wall
+  ghc-options: -Wall
 
 executable Stugit
-    import:           warnings
-    main-is:          Main.hs
-    build-depends:    base ^>=4.20.2.0
-                        , gtk &>=0.15.10
-    hs-source-dirs:   app
-    default-language: GHC2024
+  import:           warnings
+  main-is:          Main.hs
+  build-depends:
+    , base  ^>=4.20.2.0
+    , gtk   ^>=0.15.10
+
+  hs-source-dirs:   app
+  default-language: GHC2024
