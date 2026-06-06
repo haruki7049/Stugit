@@ -1,0 +1,20 @@
+cabal-version:      3.14
+name:               Stugit
+version:            0.1.0.0
+license:            MIT
+license-file:       LICENSE
+author:             haruki7049
+maintainer:         tontonkirikiri@gmail.com
+category:           Control
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+executable Stugit
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:    base ^>=4.20.2.0
+    hs-source-dirs:   app
+    default-language: GHC2024
