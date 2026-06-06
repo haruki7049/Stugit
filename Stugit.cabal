@@ -16,8 +16,8 @@ executable Stugit
   import:           warnings
   main-is:          Main.hs
   build-depends:
-    , base  ^>=4.20.2.0
-    , gtk   ^>=0.15.10
+    , base    ^>=4.20.2.0
+    , gi-gtk  ^>=4.0.11
 
   hs-source-dirs:   app
   default-language: GHC2024
