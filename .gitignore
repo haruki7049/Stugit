@@ -32,7 +32,6 @@ dist/
 # DEPENDENCY MANAGEMENT & PACKAGE CACHE
 # ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
 
-*.cabal
 .cabal-sandbox/
 .cabal/
 .hsenv/

@@ -1,4 +1,4 @@
-cabal-version:      3.14
+cabal-version:      3.0
 name:               Stugit
 version:            0.1.0.0
 license:            MIT
@@ -16,5 +16,6 @@ executable Stugit
     import:           warnings
     main-is:          Main.hs
     build-depends:    base ^>=4.20.2.0
+                        , gtk &>=0.15.10
     hs-source-dirs:   app
     default-language: GHC2024
