@@ -12,9 +12,9 @@ main = do
   -- `on` によってシグナルが送られたときのコールバックを設定できる
   -- ここでは app に #activate シグナルが送られたとき
   _ <- on app #activate do
-    -- callback では ImplicitParams 拡張によってレシーバー `?self` を参照できる
-    -- `get` によってプロパティを参照できる
-    print =<< ?self `get` #applicationId
+    -- -- callback では ImplicitParams 拡張によってレシーバー `?self` を参照できる
+    -- -- `get` によってプロパティを参照できる
+    -- print =<< ?self `get` #applicationId
     win <- new Gtk.ApplicationWindow [#application := ?self]
     -- `set` によってプロパティを設定できる
     win `set` [#title := "window title"]
