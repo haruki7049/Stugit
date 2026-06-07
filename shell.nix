@@ -2,6 +2,10 @@
   pkgs ? import <nixpkgs> { },
 }:
 
+let
+  lib = pkgs.lib;
+in
+
 pkgs.mkShell {
   nativeBuildInputs = [
     pkgs.haskellPackages.ghc # GHC haskell compiler
@@ -20,9 +24,6 @@ pkgs.mkShell {
     pkgs.pcre2
     pkgs.expat
     pkgs.libxdmcp
-    pkgs.libuuid
-    pkgs.libselinux
-    pkgs.libsepol
     pkgs.fribidi
     pkgs.libthai
     pkgs.libdeflate
@@ -31,5 +32,9 @@ pkgs.mkShell {
     pkgs.xz
     pkgs.zstd
     pkgs.libwebp
+  ] ++ lib.optionals pkgs.stdenv.isLinux [
+    pkgs.libuuid
+    pkgs.libselinux
+    pkgs.libsepol
   ];
 }
